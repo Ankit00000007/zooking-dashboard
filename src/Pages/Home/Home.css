@@ -436,9 +436,10 @@
 
 @media (max-width: 480px) {
   .slider-title {
-    font-size: 28px;
+    font-size: 20px;
   }
 
+  
   .slider-content {
     padding: 10px;
   }
@@ -450,6 +451,13 @@
   .get-started-btn {
     padding: 8px 25px;
     font-size: 14px;
+  }
+}
+
+@media (max-width: 380px) {
+
+  .slider-container{
+    height: 90vh;
   }
 }
 

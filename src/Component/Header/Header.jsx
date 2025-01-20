@@ -1,5 +1,6 @@
 // Header.jsx
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Logo from "../../Images/logo.png";
 import "./Header.css";
 
@@ -14,7 +15,6 @@ const Header = () => {
       // Re-enable scrolling when menu is closed
       document.body.style.overflow = "unset";
     }
-    
 
     // Cleanup function to ensure scroll is re-enabled when component unmounts
     return () => {
@@ -32,24 +32,24 @@ const Header = () => {
 
           {/* Nav Links */}
           <div className={`nav-links ${isMenuOpen ? "active" : ""}`}>
-            <a href="#" className="nav-link">
+            <Link to="#" className="nav-link">
               Home
-            </a>
-            <a href="#" className="nav-link">
+            </Link>
+            <Link to="#" className="nav-link">
               Packages
-            </a>
-            <a href="#" className="nav-link">
+            </Link>
+            <Link to="#" className="nav-link">
               Stake
-            </a>
-            <a href="#" className="nav-link">
+            </Link>
+            <Link to="#" className="nav-link">
               Merchant
-            </a>
-            <a href="#" className="nav-link">
+            </Link>
+            <Link to="#" className="nav-link">
               B2X
-            </a>
-            <a href="#" className="nav-link">
+            </Link>
+            <Link to="#" className="nav-link">
               Quick Exchange
-            </a>
+            </Link>
           </div>
 
           <div className={`auth-buttons ${isMenuOpen ? "active" : ""}`}>
