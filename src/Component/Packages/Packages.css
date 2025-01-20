@@ -1,0 +1,229 @@
+.ip-container {
+  padding: 2rem;
+  color: white;
+  background-image: url(../../Images/stats-bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+}
+
+.ip-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.ip-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.ip-subtitle {
+  color: #a0aec0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.ip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ip-card {
+  position: relative;
+  padding: 20px;
+  background: linear-gradient(to bottom right, #001529, #00254d);
+  border-radius: 12px;
+  transition: color 0.3s, background-color 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ip-card::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: linear-gradient(
+    30deg,
+    #002471,
+    #0db6d4,
+    #26ddff,
+    #1549ff,
+    #0194fe,
+    transparent,
+    transparent,
+    transparent,
+    transparent,
+    transparent,
+    #002471,
+    #0db6d4,
+    #26ddff,
+    #0194fe,
+    #1549ff
+  );
+  border-radius: 12px; /* Adjust according to the box radius */
+  z-index: -1; /* Place behind the content */
+  transition: background 0.3s ease-in-out;
+}
+
+.ip-card:hover {
+  transform: translateY(-5px);
+}
+
+.ip-card:hover::before {
+  background: transparent;
+}
+
+.ip-icon-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1.5rem;
+}
+
+.ip-icon-orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  border: 1px solid var(--icon-color);
+  border-radius: 50%;
+  animation: rotate 10s linear infinite;
+}
+
+.ip-satellite {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: var(--icon-color);
+  border-radius: 50%;
+  top: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ip-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: var(--icon-color);
+}
+
+.ip-card-title {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.ip-price {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--price-clr-heighlight);
+}
+
+.ip-details {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.ip-detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--detail-border-bottom);
+  color: var(--subtitle-clr);
+}
+
+.ip-detail-row:last-child {
+  border-bottom: none;
+}
+
+.ip-invest-btn {
+  font-family: 'Urbanist', sans-serif;
+  background: var(--btn-color);
+  color: var(--primary-color);
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 6rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ip-invest-btn:hover {
+  background: var(--btn-hover);
+}
+
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .ip-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .ip-container {
+    padding: 2rem 1rem;
+  }
+
+  .ip-title {
+    font-size: 2rem;
+  }
+
+  .ip-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ip-card{
+       flex-direction: inherit;
+  }
+}
+
+@media (max-width: 480px) {
+  .ip-title {
+    font-size: 1.75rem;
+  }
+
+  .ip-subtitle {
+    font-size: 1rem;
+  }
+
+  .ip-card {
+    padding: 1.5rem;
+  }
+
+  .ip-icon-container {
+    width: 80px;
+    height: 80px;
+  }
+
+  .ip-icon-orbit {
+    width: 60px;
+    height: 60px;
+  }
+}

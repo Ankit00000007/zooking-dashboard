@@ -1,0 +1,229 @@
+.mm-container1 {
+  padding:  2rem;
+  color: var(--primary-color);
+  background-image: url(../../Images/reward-bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+}
+
+.mm-header1 {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.mm-title1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.mm-subtitle1 {
+  color: var(--subtitle-clr);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.mm-grid1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mm-card1 {
+  position: relative;
+      padding: 20px;
+      background: var(--card-bg-gradient);
+      border-radius: 12px;
+      transition: color 0.3s, background-color 0.3s;
+}
+
+.mm-card1::before{
+    content: "";
+    position: absolute;
+    top: -3px; 
+    left: -3px;
+      right: -3px;
+      bottom: -3px;
+      background: var(--cards-border-gradient); 
+      border-radius: 12px;
+      z-index: -1;
+      transition: background 0.3s ease-in-out;
+}
+
+.mm-card1:hover {
+  transform: translateY(-5px);
+}
+
+.mm-card1:hover::before {
+      background: transparent;
+    }
+
+.mm-card-header1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.mm-card-score1{
+        background: var(--score-card-bg);
+        text-align: start;
+        padding: 10px;
+        border-radius: 10px;
+}
+
+.mm-icon1 {
+  font-size: 1.5rem;
+  background: var(--score-card-bg);
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.mm-step1 {
+  background-color: var(--login-border);
+  color: var(--primary-color);
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.mm-card-title1 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+.mm-card-description1 {
+  color: var(--subtitle-clr);
+  font-size: 0.975rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.mm-read-more1 {
+  background: none;
+  border: none;
+  color: var(--login-border);
+  cursor: pointer;
+  font-size: 0.875rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.mm-read-more1:hover {
+  color: var(--login-border-hover);
+}
+
+
+.progress-wrapper {
+  width: 100%;
+  padding: 0.5rem 0;
+}
+
+.progress-container {
+  width: 100%;
+  background: var(--score-card-bg);
+  border-radius: 10px;
+  height: clamp(32px, 5vw, 40px);
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: var(--progress-bar-clr);
+  transition: width 0.3s ease;
+  display: flex;
+  align-items: center;
+  padding: 0 clamp(8px, 2vw, 16px);
+  min-width: fit-content;
+}
+
+.progress-text {
+  color: var(--primary-color);
+  font-weight: 500;
+  font-size: clamp(12px, 3vw, 16px);
+  white-space: nowrap;
+}
+
+/* Space between progress bars */
+.progress-wrapper + .progress-wrapper {
+  margin-top: 0.5rem;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+  .progress-container {
+    height: clamp(28px, 4vw, 32px);
+  }
+  
+  .progress-wrapper {
+    padding: 0.25rem 0;
+  }
+  
+  .progress-wrapper + .progress-wrapper {
+    margin-top: 0.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .progress-container {
+    height: 28px;
+  }
+  
+  .progress-text {
+    font-size: 12px;
+  }
+}
+
+/* Adjust for very small screens */
+@media (max-width: 320px) {
+  .progress-wrapper {
+    padding: 0.125rem 0;
+  }
+  
+  .progress-wrapper + .progress-wrapper {
+    margin-top: 0.125rem;
+  }
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .mm-grid1 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .mm-container1 {
+    padding: 2rem 1rem;
+  }
+
+  .mm-title1 {
+    font-size: 2rem;
+  }
+
+  .mm-grid1 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .mm-title1 {
+    font-size: 1.75rem;
+  }
+
+  .mm-subtitle1 {
+    font-size: 1rem;
+  }
+
+  .mm-card1 {
+    padding: 1.25rem;
+  }
+}

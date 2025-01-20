@@ -1,0 +1,146 @@
+/* FooterNav.css */
+.footer-nav {
+  background-color: var(--footer-bg);
+  padding: 15px 0;
+  width: 100%;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 120px;
+}
+
+.logo-image {
+  height: 100%;
+  width: 100%;
+}
+
+.logo-text {
+  color: var(--login-border);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links1 {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--login-border);
+}
+
+.social-section {
+  display: flex;
+  gap: 15px;
+}
+
+.follow-text {
+  color: var(--primary-color);
+  font-size: 14px;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-link {
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.social-link:hover {
+  color: var(--login-border);
+}
+
+.scroll-top {
+  background-color: var(--scroll-color);
+  color: var(--primary-color);
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  margin-left: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-top:hover {
+  background-color: var(--scroll-color);
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+  .nav-links1 {
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .nav-links1 {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .social-section {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nav-link {
+    font-size: 12px;
+  }
+
+  .social-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .follow-text {
+    font-size: 12px;
+  }
+}

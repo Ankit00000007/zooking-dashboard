@@ -1,0 +1,1417 @@
+.slider-container {
+  width: 100%;
+  height: 95vh;
+  background: var(--slide-container);
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: all 0.8s ease-in-out;
+}
+
+.slider-background.active {
+  opacity: 1;
+}
+
+.slider-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--slide-bg);
+}
+
+.slider-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 2rem;
+  color: var(--primary-color);
+  text-align: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease-in-out;
+}
+
+/* Make current slide's content visible with a fade-up effect */
+.slider-content.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.welcome-badge {
+  background: var(--detail-border-bottom);
+  padding: 10px 30px;
+  border-radius: 25px;
+  color: var(--primary-color);
+  display: inline-block;
+  margin-bottom: 30px;
+  transition: all 0.3s ease-in-out;
+}
+
+.slider-title {
+  color: var(--primary-color);
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.slider-description {
+  color: var(--description-color);
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  transition: all 0.3s ease-in-out;
+}
+
+.get-started-btn {
+  background: var(--btn-color);
+  color: var(--primary-color);
+  padding: 12px 40px;
+  border-radius: 25px;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.get-started-btn:hover {
+  background: var(--btn-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--btn-hover-shadow);
+}
+
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 50px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--dot-bg);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.dot.active {
+  width: 24px;
+  border-radius: 4px;
+  background: var(--btn-color);
+}
+
+.slide-arrows {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+  transform: translateY(-50%);
+}
+
+.arrow {
+  color: var(--primary-color);
+  cursor: pointer;
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .slider-container {
+  height: 60vh;
+  }
+
+  .nav-container {
+    padding: 15px 20px;
+  }
+
+  .slider-title {
+    font-size: 32px;
+  }
+
+  .slider-description {
+    font-size: 16px;
+  }
+
+  .slider-content {
+    padding: 190px;
+  }
+}
+
+/* >>>>>>>>>><<<<<<<<<<<< */
+
+.financial-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 20px;
+  color: var(--primary-color);
+}
+
+.financial-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.financial-subtitle {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.financial-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.financial-description {
+  color: var(--subtitle-clr);
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.financial-cta-button {
+  font-family: 'Urbanist', sans-serif;
+  background: var(--btn-color);
+  color: var(--primary-color);
+  border: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.financial-cta-button:hover {
+  background: var(--btn-hover);
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .financial-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .financial-title {
+    font-size: 1.75rem;
+  }
+
+  .financial-description {
+    font-size: 0.9rem;
+  }
+}
+
+.crypto-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  background-color: var(--crypto-cntn-bg);
+  border-radius: 8px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.orbit {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--detail-border-bottom);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bitcoin-orbit {
+  width: 240px;
+  height: 240px;
+  border-color: var(--brown-orbit);
+}
+
+.lower-cryptos {
+  display: flex;
+  gap: 85px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.binance-orbit,
+.tron-orbit,
+.ethereum-orbit {
+  width: 80px;
+  height: 80px;
+}
+
+.binance-orbit {
+  border-color: var(--purple-orbit);
+}
+
+.tron-orbit {
+  border-color: var(--red-orbit);
+}
+
+.ethereum-orbit {
+  border-color: var(--green-orbit);
+}
+
+.satellite {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: var(--yellow-satelitte);
+  border-radius: 50%;
+  top: calc(50% - 4px);
+}
+
+.binance-orbit .satellite {
+  background: var(--pink-satelitte);
+}
+
+.tron-orbit .satellite {
+  background: var(--red-satelitte);
+}
+
+.ethereum-orbit .satellite {
+  background: var(--cyan-satelitte);
+}
+
+.crypto-icon {
+  font-size: 24px;
+  color: var(--yellow-satelitte);
+}
+
+.bitcoin-orbit {
+  background-image: var(--bitcoin-ellipse);
+}
+
+.bitcoin {
+  color: var(--yellow-satelitte);
+}
+
+.tron {
+  color: var(--red-satelitte);
+}
+
+.ethereum {
+  color: var(--cyan-satelitte);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .crypto-container {
+    max-width: 400px;
+  }
+
+  .bitcoin-orbit {
+    width: 180px;
+    height: 180px;
+  }
+
+  .binance-orbit,
+  .tron-orbit,
+  .ethereum-orbit {
+    width: 60px;
+    height: 60px;
+  }
+
+  .lower-cryptos {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .crypto-container {
+    max-width: 310px;
+  }
+
+  .bitcoin-orbit {
+    width: 140px;
+    height: 140px;
+  }
+
+  .binance-orbit,
+  .tron-orbit,
+  .ethereum-orbit {
+    width: 50px;
+    height: 50px;
+  }
+
+  .lower-cryptos {
+    gap: 10px;
+  }
+
+  .crypto-icon {
+    font-size: 20px;
+  }
+}
+
+/* >>>>>>>>>>>>slide-finance updated css<<<<<<<<<<< */
+@media (max-width: 1024px) {
+  .slider-content {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .slider-title {
+    font-size: 40px;
+  }
+
+  .slider-description {
+    font-size: 16px;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-content {
+    padding: 15px;
+  }
+
+  /* .slider-background {
+  } */
+
+  .slider-title {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+
+  .slider-description {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+
+  .welcome-badge {
+    padding: 8px 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+
+  .get-started-btn {
+    padding: 10px 30px;
+    font-size: 16px;
+  }
+
+  .slider-dots {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider-title {
+    font-size: 28px;
+  }
+
+  .slider-content {
+    padding: 10px;
+  }
+
+  .slider-description {
+    font-size: 13px;
+  }
+
+  .get-started-btn {
+    padding: 8px 25px;
+    font-size: 14px;
+  }
+}
+
+.slider-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.8s ease-in-out;
+}
+
+.slider-background.active {
+  opacity: 1;
+}
+
+.slider-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Make sure images cover the full container */
+picture {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Optional: Add specific styles for mobile image quality */
+@media screen and (max-width: 768px) {
+  .slider-bg-image {
+    object-position: center center;
+  }
+}
+
+/* Financial Section Responsive Styles */
+@media (max-width: 1024px) {
+  .financial-container {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 30px;
+    min-height: auto;
+  }
+
+  .financial-content {
+    text-align: center;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .crypto-container {
+    margin: 0 auto;
+    padding: 30px;
+  }
+
+  .lower-cryptos {
+    gap: 40px;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .financial-container {
+    padding: 30px 15px;
+  }
+
+  .financial-title {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .financial-subtitle {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+
+  .financial-description {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+
+  .financial-cta-button {
+    padding: 12px 25px;
+    font-size: 14px;
+  }
+
+  /* Adjust crypto orbits for tablet */
+  .bitcoin-orbit {
+    width: 200px;
+    height: 200px;
+  }
+
+  .lower-cryptos {
+    gap: 30px;
+    margin-top: 30px;
+  }
+
+  .binance-orbit,
+  .tron-orbit,
+  .ethereum-orbit {
+    width: 70px;
+    height: 70px;
+  }
+
+      .clr-btc-img {
+        width: 100px !important;
+    }
+}
+
+@media (max-width: 580px) {
+  .financial-container {
+    padding: 20px 10px;
+  }
+
+  .financial-title {
+    font-size: 24px;
+  }
+
+  .financial-description {
+    font-size: 13px;
+  }
+
+  /* Adjust crypto orbits for mobile */
+  .bitcoin-orbit {
+    width: 160px;
+    height: 160px;
+  }
+
+  .lower-cryptos {
+    gap: 40px;
+    margin-top: 25px;
+  }
+
+  .binance-orbit,
+  .tron-orbit,
+  .ethereum-orbit {
+    width: 55px;
+    height: 55px;
+  }
+
+  .crypto-container {
+    padding: 20px;
+  }
+
+  .clr-btc-img {
+    width: 80px !important;
+  }
+}
+
+/* Fix for very small screens */
+@media (max-width: 360px) {
+  .slider-title {
+    font-size: 24px;
+  }
+
+  .bitcoin-orbit {
+    width: 140px;
+    height: 140px;
+  }
+
+  .lower-cryptos {
+    gap: 50px;
+  }
+
+  .binance-orbit,
+  .tron-orbit,
+  .ethereum-orbit {
+    width: 45px;
+    height: 45px;
+  }
+
+  
+}
+
+/* Fix slider content padding issue */
+@media (max-width: 768px) {
+  .slider-content {
+    padding: 20px !important; /* Override the 190px padding */
+  }
+}
+
+/* >>>>><<<<<<<< */
+
+/* >>>>>>>>>><<<<<<<<< */
+
+.pwa-container {
+  padding: 4rem 2rem;
+  color: var(--primary-color);
+  overflow: hidden;
+}
+
+.pwa-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.pwa-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.pwa-subtitle {
+  color: var(--subtitle-clr);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.pwa-slider-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.pwa-slider {
+  display: flex;
+  animation: slide 30s linear infinite;
+  width: fit-content;
+}
+
+.pwa-slide {
+  flex-shrink: 0;
+  padding: 0 1rem;
+}
+
+.pwa-payment-card {
+  background: var( --card-bg-gradient);
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 200px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid rgba(255, 255, 255, 0.1); */
+  transition: transform 0.3s ease;
+}
+
+/* .pwa-payment-card:hover {
+  transform: translateY(-5px);
+} */
+
+.pwa-payment-logo {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Add hover pause effect */
+.pwa-slider-wrapper:hover .pwa-slider {
+  animation-play-state: paused;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .pwa-payment-card {
+    width: 180px;
+    height: 90px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pwa-container {
+    padding: 2rem 1rem;
+  }
+
+  .pwa-title {
+    font-size: 2rem;
+  }
+
+  .pwa-payment-card {
+    width: 160px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pwa-title {
+    font-size: 1.75rem;
+  }
+
+  .pwa-subtitle {
+    font-size: 1rem;
+  }
+
+  .pwa-payment-card {
+    width: 140px;
+    height: 70px;
+    padding: 1rem;
+  }
+
+  .pwa-slide {
+    padding: 0 0.5rem;
+  }
+}
+
+/* Add a gradient overlay to create a fade effect at the edges */
+.pwa-slider-wrapper::before,
+.pwa-slider-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.pwa-slider-wrapper::before {
+  left: 0;
+  background: var(--slider-before);
+}
+
+.pwa-slider-wrapper::after {
+  right: 0;
+  background: var(--slider-after);
+}
+
+/* >>>>>><<<<<<<<< */
+
+.wcn-container {
+  background-image: url(../../Images/reward-bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  padding: 2rem;
+  color: var(--primary-color);
+}
+
+.wcn-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.wcn-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.wcn-subtitle {
+  color: var(--subtitle-clr);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.wcn-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.wcn-card {
+  text-align: center;
+  position: relative;
+  padding: 20px;
+  background: var(--card-bg-gradient);
+  border-radius: 12px;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.wcn-card::before {
+  content: "";
+  position: absolute;
+  top: -3px; /* Border thickness */
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: var(--cards-border-gradient);
+  border-radius: 12px;
+  z-index: -1; 
+  transition: background 0.3s ease-in-out;
+}
+
+.wcn-card:hover {
+  transform: translateY(-5px);
+}
+
+.wcn-card:hover::before {
+  background: transparent;
+}
+
+.wcn-icon-wrapper {
+ background: var(--btn-color);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto;
+  color: var(--primary-color);
+}
+
+.wcn-card-title {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.wcn-card-description {
+  color: var(--subtitle-clr);
+  font-size: 0.975rem;
+  line-height: 1.6;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .wcn-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .wcn-container {
+    padding: 2rem 1rem;
+  }
+
+  .wcn-title {
+    font-size: 2rem;
+  }
+
+  .wcn-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .wcn-title {
+    font-size: 1.75rem;
+  }
+
+  .wcn-subtitle {
+    font-size: 1rem;
+  }
+
+  .wcn-card {
+    padding: 1.5rem;
+  }
+
+  .wcn-icon-wrapper {
+    width: 40px;
+    height: 40px;
+  }
+
+  .wcn-card-title {
+    font-size: 1.1rem;
+  }
+
+  .wcn-card-description {
+    font-size: 0.9rem;
+  }
+}
+
+/* >>>>>>>>><<<<<<<<<<< */
+
+.ct-container {
+  background-image: url(../../Images/stats-bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+  padding: 4rem 2rem;
+  color: var(--primary-color);
+}
+
+.ct-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.ct-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.ct-subtitle {
+  color: var(--subtitle-clr);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ct-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ct-card {
+  background: var(--card-bg-gradient);
+  border-radius: 10px;
+  padding: 2rem;
+  position: relative;
+  transition: transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 320px;
+}
+
+.ct-card:hover {
+  transform: translateY(-5px);
+}
+
+.ct-testimonial {
+  color: var(--primary-color);
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-top: 0;
+}
+
+.ct-profile {
+  display: flex;
+  align-items: center;
+}
+
+.ct-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 1rem;
+  border: 2px solid var(--login-border);
+}
+
+.ct-info {
+  flex: 1;
+}
+
+.ct-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.ct-role {
+  color: var(--subtitle-clr);
+  font-size: 0.9rem;
+}
+
+.ct-company {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid var(--detail-border-bottom);
+}
+
+.ct-company-name {
+  color: var(--company-name);
+  font-weight: 500;
+}
+
+.ct-arrow {
+  color: var(--company-name);
+  font-size: 1.25rem;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .ct-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ct-card {
+    min-height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ct-container {
+    padding: 2rem 1rem;
+  }
+
+  .ct-title {
+    font-size: 2rem;
+  }
+
+  .ct-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ct-card {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .ct-title {
+    font-size: 1.75rem;
+  }
+
+  .ct-subtitle {
+    font-size: 1rem;
+  }
+
+  .ct-card {
+    padding: 1.5rem;
+  }
+
+  .ct-testimonial {
+    font-size: 0.95rem;
+  }
+
+  .ct-name {
+    font-size: 1rem;
+  }
+}
+
+/* >>>>>>>><<<<<<<<< */
+
+/* FAQSection.css */
+.faq-container {
+  background-image: url(../../Images/reward-bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  padding: 20px;
+}
+
+.faq-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.faq-title {
+  color: var(--primary-color);
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.faq-subtitle {
+  color: var(--subtitle-clr);
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-item {
+  position: relative;
+  background-color: var(--faq-bg);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.faq-item-left-border {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: var(--login-border);
+}
+
+.faq-item-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-question-button {
+  width: 100%;
+  padding: 20px 24px;
+  background: transparent;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: var(--primary-color);
+  text-align: left;
+}
+
+.faq-question-button:hover {
+  background-color: var(--faq-question-hover);
+}
+
+.faq-question-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.faq-number {
+  background-color: var(--login-border);
+  color: var(--primary-color);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.faq-question-text {
+  font-size: 14px;
+  font-family: 'Urbanist', sans-serif;
+}
+
+.faq-arrow {
+  color: var(--primary-color);
+  font-size: 12px;
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+.faq-arrow.active {
+  transform: rotate(0deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background-color: var(--faq-bg);
+  color: var(--faq-clr);
+  font-size: 14px;
+  padding: 0 24px 0 64px;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+.faq-answer.active {
+  max-height: 200px;
+  padding: 0 24px 20px 64px;
+  opacity: 1;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .faq-container {
+    padding: 20px 10px;
+  }
+
+  .faq-title {
+    font-size: 28px;
+  }
+
+  .faq-question-button {
+    padding: 16px 20px;
+  }
+
+  .faq-answer.active {
+    padding: 0 20px 16px 60px;
+  }
+}
+
+/* >>>>>>>>>>><<<<<<<<<<< */
+
+/* TopInvestors.css */
+.investors-container {
+  background-image: url(../../Images/stats-bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+  padding: 20px;
+}
+
+.investors-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.investors-title {
+  color: var(--primary-color);
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.investors-subtitle {
+  color: var(--faq-clr);
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.investors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.investor-card {
+  background-color: var(--faq-bg);
+  border-radius: 12px;
+  padding: 20px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.investor-card:hover {
+  border: outset var(--login-border);
+}
+
+.investor-rank {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: var(--primary-color);
+  font-size: 14px;
+  background: var(--card-bg);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.investor-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.investor-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: relative;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-image {
+  width: 60px;
+  height: 60px;
+}
+
+.badge-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: var(--login-border);
+  color: var(--primary-color);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  border: 2px solid var(--faq-bg);
+}
+
+.investor-name {
+  color: var(--primary-color);
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.investor-username {
+  color: var(--faq-clr);
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.investment-amount {
+  background: var(--btn-color);
+  color: var(--primary-color);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.investment-amount:hover {
+  background: var(--btn-hover);
+}
+
+.load-more-btn {
+  font-family: 'Urbanist', sans-serif;
+  display: block;
+  margin: 0 auto;
+  background: var(--btn-color);
+  color: var(--primary-color);
+  border: none;
+  padding: 15px 30px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.load-more-btn:hover {
+  background: var(--btn-hover);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .investors-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+  }
+
+  .investors-title {
+    font-size: 28px;
+  }
+
+  .investor-card {
+    padding: 16px;
+  }
+
+  .investor-avatar {
+    width: 60px;
+    height: 60px;
+  }
+
+  .avatar-image {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .investors-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+  }
+
+  .investor-card {
+    padding: 12px;
+  }
+}

@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --tw-bg-opacity: 1;
+    --primary-color: #ffffff;
+    --body-color: rgb(0 6 24 / var(--tw-bg-opacity));
+    --header-bg: rgba(0, 6, 24, 0.3);
+    --nav-link-bg: rgba(0, 6, 24, 0.95);
+    --login-border: #0095ff;
+    --login-border-hover: #66b3ff;
+    --price-clr-heighlight: #00f2fe;
+    --slide-container: linear-gradient(135deg, #1a0033 0%, #000033 100%);
+    --btn-color: linear-gradient(to right, #0194fe, #1549ff, #36b5d1, #086bad);
+    --btn-hover: linear-gradient(to right, #36b5d1, #086bad, #0194fe, #1549ff);
+    --cards-border-gradient: linear-gradient(30deg, #002471, #0db6d4, #26ddff, #1549ff, #0194fe, transparent, transparent, transparent, transparent, transparent, #002471, #0db6d4, #26ddff, #0194fe, #1549ff);
+    --card-title-gradient: linear-gradient(90deg, #00EAF5, #9b008f, #b39c00);
+    --subtitle-clr: #a0aec0;
+    --faq-clr: #b8b9bb;
+    --crypto-cntn-bg: #0a192f;
+    --slide-bg: rgb(0 0 0 / 21%);
+    --score-card-bg: rgba(0, 102, 204, 0.1);
+    --slider-before: linear-gradient(to right, #000b1a, transparent);
+    --slider-after: linear-gradient(to left, #000b1a, transparent);
+    --card-bg: rgba(0, 102, 204, 0.1);
+    --card-bg-gradient: linear-gradient(to bottom right, #001529, #00254d);
+    --progress-bar-clr: linear-gradient(90deg, rgb(104 0 255 / 74%) 0%, rgb(0 255 219 / 78%) 100%);
+    --btn-hover-shadow: 0 5px 15px rgba(0, 149, 255, 0.3);
+    --description-color: rgba(255, 255, 255, 0.8);
+    --detail-border-bottom: rgba(255, 255, 255, 0.1);
+    --faq-question-hover: rgba(255, 255, 255, 0.05);
+    --dot-bg: rgba(255, 255, 255, 0.3);
+    --brown-orbit: rgba(255, 140, 0, 0.3);
+    --bitcoin-ellipse: radial-gradient(
+    ellipse,
+    rgba(247, 147, 26, 0.6),
+    rgba(71, 71, 71, 0.4) 50%
+  );
+    --faq-bg: #0b1627;
+    --purple-orbit: rgba(209, 11, 240, 0.3);
+    --red-orbit: rgba(255, 0, 0, 0.3);
+    --green-orbit: rgba(114, 237, 242, 0.3);
+    --yellow-satelitte: #ff8c00;
+    --company-name: #ff6b00;
+    --pink-satelitte: rgb(236 102 218);
+    --red-satelitte: #ff0000;
+    --cyan-satelitte: #72edf2;
+    --footer-bg: #001b3d;
+    --scroll-color: #ffa000;
+}
+
+
+body{
+  background-color: var(--body-color);
+}
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Styling the scrollbar container */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Styling the scrollbar thumb (draggable part) */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #4800ae, #000360); /* Custom gradient */
+  border-radius: 6px; /* Rounded corners */
+  height: 5px;
+}
+
+/* Styling the scrollbar track (background) */
+::-webkit-scrollbar-track {
+  background: linear-gradient(45deg, #0c001d, #14003f); /* Light background for contrast */
+  border-radius: 6px;
+}
+
+
+
+/* Optional: Hover effects for the thumb */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #683eff, #445dff); /* Brighter gradient on hover */
+}
