@@ -14,6 +14,7 @@ const Header = () => {
       // Re-enable scrolling when menu is closed
       document.body.style.overflow = "unset";
     }
+    
 
     // Cleanup function to ensure scroll is re-enabled when component unmounts
     return () => {
