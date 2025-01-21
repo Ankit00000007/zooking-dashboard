@@ -226,4 +226,8 @@
     width: 60px;
     height: 60px;
   }
+
+  .ip-invest-btn {
+    padding: 0.75rem 4rem;
+  }
 }
